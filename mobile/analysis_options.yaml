@@ -1,0 +1,25 @@
+# Flutter ve Dart projesi için optimize edilmiş analyzer ve linter ayarları
+
+# Flutter önerilen lint kuralları
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - ios/Pods/**
+    - android/.gradle/**
+    - android/app/build/**
+    - node_modules/**
+    - .dart_tool/**
+    - .idea/**
+    - .vscode/**
+
+linter:
+  rules:
+    # Geliştirme sürecini hızlandırmak için bazı kuralları esnetiyoruz
+    avoid_print: false           # print kullanılabilir
+    prefer_const_constructors: true
+    prefer_final_locals: true
+    unnecessary_new: true
+    prefer_single_quotes: true
+    # Diğer kuralları flutter_lints setinden alıyoruz
